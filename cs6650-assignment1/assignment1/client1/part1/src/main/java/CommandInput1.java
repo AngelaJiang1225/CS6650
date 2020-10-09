@@ -1,14 +1,16 @@
-public class CommandInput2 {
+import java.lang.String;
+
+public class CommandInput1 {
 
     private static final int MAX_THREADS = 256;
-    private String serverIp;
+    private String serverAddress;
     private int maxThreads;
     private int numSkiers;
     private int numLifts;
     private String skiDayNumber;
     private String resortId;
 
-    public CommandInput2(String[] args) throws Exception {
+    public CommandInput1(String[] args) throws Exception {
         this.numSkiers = 50000;
         this.numLifts = 40;
         this.skiDayNumber = "1";
@@ -32,21 +34,21 @@ public class CommandInput2 {
             } else if ("-resortID".equals(cur)) {
                 this.resortId = args[i + 1];
             } else if ("-address".equals(cur)) {
-                this.serverIp = args[i + 1];
+                this.serverAddress = args[i + 1];
             }
         }
     }
 
     @Override
     public String toString() {
-        return "CommandInput: {" + "maxThreads is: " + maxThreads +
-                ", numSkiers is: " + numSkiers + ", numLifts is: " + numLifts +
-                ", skiDayNumber is: " + skiDayNumber + '\'' + ", resortId is: " + resortId + '\'' +
-                ", serverIp is: " + serverIp + '\'' + '}';
+        return "CommandInput: {" + "maxThreads is: " + maxThreads + ", numSkiers is: " + numSkiers +
+                ", numLifts is: " + numLifts + ", skiDayNumber is: " + skiDayNumber + '\'' +
+                ", resortId is: " + resortId + '\'' + ", serverAddress is: " + serverAddress + '\'' +
+                '}';
     }
 
-    public String getServerIp() {
-        return serverIp;
+    public String getServerAddress() {
+        return serverAddress;
     }
 
     public int getMaxThreads() {
