@@ -1,0 +1,1 @@
+http://ec2-54-89-194-199.compute-1.amazonaws.com:8080/webapps/skiers/12/seasons/2019/day/1/skier/123
