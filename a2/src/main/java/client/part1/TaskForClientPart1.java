@@ -1,18 +1,16 @@
 package client.part1;
 
 import dao.SkierRecordsDao;
+import io.swagger.client.ApiClient;
 import io.swagger.client.ApiException;
 import io.swagger.client.ApiResponse;
 import io.swagger.client.api.SkiersApi;
 import io.swagger.client.model.LiftRide;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ThreadLocalRandom;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import dao.SkierRecordsDao;
-import io.swagger.client.model.LiftRide;
-import io.swagger.client.ApiClient;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TaskForClientPart1 implements Runnable {
   private static final Logger logger = LogManager.getLogger(TaskForClientPart1.class);

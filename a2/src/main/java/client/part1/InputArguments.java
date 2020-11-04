@@ -2,7 +2,7 @@ package client.part1;
 
 public class InputArguments {
 
-  private static final int DEFAULT_NUM_SKIERS = 50000;
+  private static final int DEFAULT_NUM_SKIERS = 20000;
   private static final int DEFAULT_NUM_LIFTS = 40;
   private static final String DEFAULT_SKI_DAY_NUMBER = "1";
   private static final String DEFAULT_RESORT_NAME = "SilverMt";

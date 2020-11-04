@@ -8,7 +8,7 @@ public class SkierRecords {
     private final int seasonId;
     private final int dayId;
     private final int time;
-    private final int vertical;
+    private int vertical;
 
     public SkierRecords(Integer id, Integer resortId, Integer skierId, Integer liftId, int seasonId, int dayId, int time, int vertical) {
         this.id = id;

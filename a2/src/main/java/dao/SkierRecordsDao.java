@@ -1,15 +1,16 @@
 package dao;
 
-import java.sql.*;
-
 import db.DBDataSource;
+import entity.SkierDayVertical;
+import entity.SkierRecords;
 import io.swagger.client.model.SkierVertical;
 import io.swagger.client.model.TopTen;
 import io.swagger.client.model.TopTenTopTenSkiers;
-import entity.SkierDayVertical;
-import entity.SkierRecords;
 import org.apache.commons.dbcp2.*;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SkierRecordsDao {
@@ -137,7 +138,7 @@ public class SkierRecordsDao {
         }
     }
 
-    public static TopTen getTopTenVerticals(int dayID) throws SQLException {
+        public static TopTen getTopTenVerticals(int dayID) throws SQLException {
         final String st =
                 "SELECT skier_id, SUM(Vertical) AS totalVertical FROM skier_records INNER JOIN lifts_vertical " +
                         "ON skier_records.lift_id = lifts_vertical.lift_id " +

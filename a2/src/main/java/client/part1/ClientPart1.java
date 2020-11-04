@@ -1,9 +1,9 @@
 package client.part1;
 
+import dao.SkierRecordsDao;
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
-import dao.SkierRecordsDao;
-import io.swagger.client.model.LiftRide;
 
 public class ClientPart1 {
   private static final int NUM_GET_PHASE_1 = 5;
@@ -122,14 +122,14 @@ public class ClientPart1 {
     long endTimeInMillSec = System.currentTimeMillis();
     int numOfSuccess = sharedRequestCountAtomic.numSuccessAtomic.get();
     int numOfFailure = sharedRequestCountAtomic.numFailureAtomic.get();
-    double wallTimeInSec = ((endTimeInMillSec - startTimeInMillSec) / 1000.0) * 1.0;
+    double wallTime = (endTimeInMillSec - startTimeInMillSec) * 1.0;
     double throughPut =
-        numOfSuccess / (wallTimeInSec * 1.0);
+        numOfSuccess / (wallTime * 1.0) * 1000;
     System.out.println(String.format("Number of successful requests= %s \n"
             + "number of failed requests= %s \n"
             + "Total requests= %s \n"
-            + "Total run time in seconds (wall time)= %s \n"
-            + "Throughput= %s.", numOfSuccess, numOfFailure, numOfFailure + numOfSuccess, wallTimeInSec,
+            + "Time Elapsed(ms)= %s \n"
+            + "Throughput(requests/sec)= %s.", numOfSuccess, numOfFailure, numOfFailure + numOfSuccess, wallTime,
         throughPut));
   }
 }

@@ -3,11 +3,7 @@ package client.part2;
 import client.part1.InputArguments;
 
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -168,17 +164,14 @@ public class ClientPart2 {
 
     System.out.println("\n");
     System.out.println(String.format(
-        "Total wall time=%s,\n"
-            + "Throughput=%s,\n"
-            + "Mean response time for GET=%s,\n"
-            + "Median response time for GET=%s,\n"
-            + "P99 response time for GET=%s,\n"
-            + "Max response time for GET=%s.\n"
-            + "Mean response time for POST=%s,\n"
-            + "Median response time for POST=%s,\n"
-            + "P99 response time for POST=%s,\n"
-            + "Max response time for POST=%s.\n",
-        wallTimeInSec, throughPut,
+            "Mean response time for GET= %s ms,\n"
+            + "Median response time for GET= %s ms,\n"
+            + "P99 response time for GET= %s ms,\n"
+            + "Max response time for GET= %s ms\n"
+            + "Mean response time for POST= %s ms\n"
+            + "Median response time for POST= %s ms\n"
+            + "P99 response time for POST= %s ms\n"
+            + "Max response time for POST= %s ms\n",
         statForGet.getMean(), statForGet.getMedian(), statForGet.getP99(), statForGet.getMax(),
         statForPost.getMean(), statForPost.getMedian(), statForPost.getP99(),
         statForPost.getMax()));

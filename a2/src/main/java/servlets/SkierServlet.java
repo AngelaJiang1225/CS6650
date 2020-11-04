@@ -1,4 +1,4 @@
-package server;
+package servlets;
 
 import com.google.gson.Gson;
 import dao.SkierRecordsDao;
