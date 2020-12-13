@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/a2/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cs6650-a3/Server/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/cs6650-a3/Client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cs6650-a3/java-client-generated_2/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
